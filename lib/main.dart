@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_list/widgets/grocery_list.dart';
 
 final theme = ThemeData(
-    useMaterial3: true,
+  useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
-     seedColor: const Color.fromARGB(255, 147, 229, 250),
-          brightness: Brightness.dark,
-          surface: const Color.fromARGB(255, 42, 51, 59),
+    seedColor: const Color.fromARGB(255, 147, 229, 250),
+    brightness: Brightness.dark,
+    surface: const Color.fromARGB(255, 42, 51, 59),
   ),
- // textTheme: GoogleFonts.latoTextTheme(),
+  scaffoldBackgroundColor: const Color.fromARGB(255, 50, 58, 60),
 );
+
+void main() {
+  runApp(const MyApp());
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,9 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Groceries',
+      title: 'Flutter Demo',
       theme: theme,
-      home: ...,
+      home: const GroceryList(),
     );
   }
 }
