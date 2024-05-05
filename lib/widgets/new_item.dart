@@ -14,9 +14,21 @@ class _NewItemState extends State<NewItem> {
       appBar: AppBar(
         title: const Text('Add a new aitem'),
       ),
-      body: const Padding(
+      body: Padding(
         padding: const EdgeInsets.all(12),
-        child: Text('data'),
+        child: Form(
+          child: Column(
+            children: [
+              TextFormField(
+                maxLength: 50,
+                decoration: const InputDecoration(label: Text('label')),
+                validator: (value) {
+                  return 'Demo...';
+                },
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
